@@ -3,7 +3,7 @@
  * Plugin Name: Dynamic Cart Quantity for WooCommerce
  * Plugin URI: https://www.tannich.com/plugins
  * Description: This plugin will hide the WooCommerce "Update Cart" button and reload the quantity changes dynamic over jQuery. You don't need this extra click anymore!
- * Version: 1.0
+ * Version: 1.1
  * Author: Marcel Tannich
  * Author URI: https://www.tannich.com
  *
