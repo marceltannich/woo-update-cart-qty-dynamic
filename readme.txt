@@ -3,9 +3,9 @@ Contributors: mardroid
 Donate link: https://paypal.me/MarcelTannich
 Tags: woocommerce, cart, shop, dynamic, quantity, dynamic quantity, hide update button, woo
 Requires at least: 4.9
+Tested up to: 6.0
+Stable tag: 1.1
 Requires PHP: 5.6
-Tested up to: 5.4.2
-Stable tag: trunk
 License: GPLv2+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,7 @@ This Plugin is based on a posting on StackExchange related to WordPress develope
 
 == Plugin Requirements ==
 * This plugin requires WordPress 4.9 or greater
+* This plugin requires WooCommerce 3.0.0
 * This plugin requires PHP 5.6 or greater
 
 
@@ -36,11 +37,13 @@ This Plugin is based on a posting on StackExchange related to WordPress develope
 
 1. WooCommerce cart page after plugin activation.
 
-== Changelog ==
 
+== Changelog ==
 
 = 1.0 =
 * Initial release
 
 = 1.1 =
-* Tested up to WP 5.4.2
+* Tested up to WP 6.0
+
+
