@@ -3,8 +3,8 @@
  * Plugin Name: Dynamic Cart Quantity for WooCommerce
  * Plugin URI: https://www.tannich.com/plugins
  * Description: This plugin will hide the WooCommerce "Update Cart" button and reload the quantity changes dynamic over jQuery. You don't need this extra click anymore!
- * Version: 1.1
- * Author: Marcel Tannich
+ * Version: 1.2
+ * Author: mardroid
  * Author URI: https://www.tannich.com
  *
  * @package Woo Dynamic Cart Quantity Update
@@ -25,39 +25,31 @@
  * You should have received a copy of the GNU General Public License
  * along with Woo Update Cart Qty Dynamic. If not, see https://www.gnu.org/licenses/gpl-2.0.html
  */
-
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );  // prevent direct access
-
-/* Init for Translation ready */
-function dcqfw_init() {
-	load_plugin_textdomain( 'woo-update-cart-qty-dynamic', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
+defined('ABSPATH') || die('No script kiddies please!');  // prevent direct access
 
 /* Update Cart */
-add_action( 'wp_footer', 'dcqfw_update_cart' ); 
-function dcqfw_update_cart() { 
-    if (is_cart()) : 
-    ?> 
-    <script> 
-    jQuery('div.woocommerce').on('change', '.qty', function(){ 
-        jQuery("[name='update_cart']").trigger("click");
-         }); 
-    </script> 
-    <?php 
-    endif; 
+add_action('wp_footer', 'dcqfw_update_cart');
+function dcqfw_update_cart()
+{
+    if (is_cart()) :
+?>
+        <script>
+            jQuery('div.woocommerce').on('change', '.qty', function() {
+                jQuery("[name='update_cart']").trigger("click");
+            });
+        </script>
+<?php
+    endif;
 }
-
 /* CSS to hide Update Button */
-function dcqfw_hide_button() {
-
-global $value;
-$num = $value/2;
-
-echo '
+function dcqfw_hide_button()
+{
+    echo '
         <style type="text/css">
         button[name="update_cart"] {
-        display: none !important;   
+        display: none !important;
+        }
         </style>
     ';
 }
-add_action( 'wp_print_styles', 'dcqfw_hide_button' );
+add_action('wp_print_styles', 'dcqfw_hide_button');
